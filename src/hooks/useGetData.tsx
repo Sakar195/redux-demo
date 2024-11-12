@@ -9,9 +9,7 @@ export const useGet = () => {
   return useQuery(
     [QUERY_KEY],
     async () => {
-      const { data } = await axios.get(
-        "www.jsonplaceholder.typicode.com/users"
-      );
+      const { data } = await axios.get("http://localhost:3000/");
       return data;
     },
     {
